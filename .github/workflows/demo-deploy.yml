@@ -14,5 +14,5 @@ jobs:
         - uses: actions/checkout@v4
           name: Checkout
         - name: Imprime Alo
-          run: echo  Alo mundo $ {{ inputs.campo-novo }}
+          run: echo  Alo mundo ${{ inputs.campo-novo }}
           
