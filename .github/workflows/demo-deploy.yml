@@ -1,12 +1,21 @@
 on:
   workflow_call:
     inputs:
-      variavel_demo:
+      campo-novo:
         required: true
         type: string
 
 jobs:
   deploy:
     runs-on: ubuntu-24.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-        
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@v4
+
+
+        # Runs a single command using the runners shell
+        - name: Run a one-line script
+          run: echo  Alo mundo $ {{ inputs.campo-novo }}
+          
